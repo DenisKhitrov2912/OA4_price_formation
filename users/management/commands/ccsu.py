@@ -11,7 +11,7 @@ class Command(BaseCommand):
             is_superuser=True,
             is_active=True,
             is_staff=True,
-            chat_id=input("Введите чат айди из телеги: ")
+            is_trader=True,
         )
         user.set_password('1234567')
         user.save()
