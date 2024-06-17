@@ -8,4 +8,4 @@ class PriceSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Price
-        fields = '__all__'
+        fields = ['user', 'shipper', 'start_price', 'final_price', ]

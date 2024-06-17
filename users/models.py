@@ -12,7 +12,8 @@ class User(AbstractUser):
     phone = models.CharField(verbose_name='телефон', **NULLABLE)
     city = models.CharField(max_length=50, verbose_name='город', **NULLABLE)
     is_active = models.BooleanField(default='True', verbose_name='активность')
-    is_trader = models.BooleanField(default='False', verbose_name='продавец') # назначить через админку
+    is_trader = models.BooleanField(
+        default='False', verbose_name='продавец')  # назначить через админку
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
