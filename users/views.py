@@ -32,9 +32,12 @@ class UserDetailView(generics.RetrieveAPIView):
     queryset = User.objects.all()
 
     def get_serializer_class(self):
-        if self.request.user.id == self.get_object().id:
-            return UserSerializer
-        return UserSerializerForOthers
+        try:
+            if self.request.user.id == self.get_object().pk:
+                return UserSerializer
+            return UserSerializerForOthers
+        except AssertionError:
+            return UserSerializerForOthers
 
 
 class UserUpdateView(generics.UpdateAPIView):
