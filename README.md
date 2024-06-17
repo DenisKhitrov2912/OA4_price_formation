@@ -7,13 +7,13 @@ Python-разработчиков по теме ОА4 "Формирование 
     -Клонировать на локальную машину.
 
     -Создать и применить миграции последовательными командами 
-"python3 manage.py makemigrations"
-и "python3 manage.py migrate".
+    "python3 manage.py makemigrations"
+    и "python3 manage.py migrate".
 
     -Запустить сервер командой "python3 manage.py runserver".
 
     -Для запуска тестов выпонить команду в терминале
-"coverage run --source='.' manage.py test".
+    "coverage run --source='.' manage.py test".
 
     -Для просмотра покрытия выпонить команду в терминале 
-"coverage report".
+    "coverage report".
